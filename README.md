@@ -1,6 +1,6 @@
-# open-fmind
+# Open-fMIND
 
-Code to build open-fmind, a dataset of parcellated fMRI timeseries from public [OpenNeuro](https://openneuro.org/) datasets.
+Code to build Open-fMIND, a dataset of parcellated fMRI timeseries from public [OpenNeuro](https://openneuro.org/) datasets.
 
 For one subject of an OpenNeuro dataset, `open-fmind` downloads the raw data, preprocesses it with fMRIPrep 25.2.3, averages the BOLD signal within the regions of one or more brain atlases, and denoises the resulting timeseries.
 
@@ -107,7 +107,7 @@ preproc/functional-connectivity/{dataset}/sub-{sub}/[ses-{ses}/]func/
     sub-{sub}_[ses-{ses}_]task-{task}_[run-{run}_]atlas-{atlas}_desc-preproc_measure-correlation_standardize-false_connectivity.nii.gz
 ```
 
-Timeseries are float32 NIfTI images of shape `(n_rois, 1, 1, n_timepoints)`, with the repetition time in the header, and connectivity matrices float32 images of shape `(n_rois, n_rois, 1, 1)`. The JSON sidecar of each file gives the region labels, the repetition time, what was applied to the signal, and a `GeneratedBy` chain recording the OpenNeuro snapshot, the fMRIPrep command and the open-fmind version that produced it.
+Timeseries are float32 NIfTI images of shape `(n_rois, 1, 1, n_timepoints)`, with the repetition time in the header, and connectivity matrices float32 images of shape `(n_rois, n_rois, 1, 1)`. The JSON sidecar of each file gives the region labels, the repetition time, what was applied to the signal, and a `GeneratedBy` chain recording the OpenNeuro snapshot, the fMRIPrep command and the Open-fMIND version that produced it.
 
 ## License
 
